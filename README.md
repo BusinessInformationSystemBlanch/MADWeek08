@@ -153,3 +153,18 @@ Look at the data viewer pane. You should see a collection named users.
 Click on users, and you will see random document IDs containing the name and email you just submitted from your app!
 
 If everything worked correctly your app is saving data to your firestore database in the cloud.
+
+
+## Extension Task — Build a Second Page (BMI Calculator)
+
+Now that you have successfully saved data to Firestore, let's extend your React Native application by adding a second interactive screen: a **BMI Calculator**.
+
+### Step 1: Create the Component File
+Create a new file in your project root directory named **`BmiScreen.js`** and paste the BMI calculation logic and user interface code.
+
+### Step 2: Import and Display the Screen in `App.js`
+To make your app display your new calculator screen, open **`App.js`** and import your new component:
+
+```
+import BmiScreen from "./BmiScreen";
+```
