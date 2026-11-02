@@ -12,16 +12,16 @@ The app departs from the approach of using Expo Snacks used in previous labs. Th
 
 ## Step 0
 
-Step 1: Open command prompt
-Step 2: cd to Documents
-Step 3: Type git clone https://github.com/BusinessInformationSystemBlanch/MADWeek08.git
-Step 4: cd to MADWeek08
-Step 5: Type npm install expo -g
-Step 6: Open your project in VS Code.
-Step 7: Click on View -- Open View -- Terminal
-Step 8: Type Set-ExecutionPolicy -Scope CurrentUser Unrestricted   on the terminal, so the current user can run expo project.
-Step 9: Type npx expo install react-dom react-native-web to enable web preview of the app.
-Step 10: Tyep npx expo start  to start the project 
+Step 1: Open command prompt <br>
+Step 2: cd to Documents  <br>
+Step 3: Type git clone https://github.com/BusinessInformationSystemBlanch/MADWeek08.git <br>
+Step 4: cd to MADWeek08 <br>
+Step 5: Type npm install expo -g <br>
+Step 6: Open your project in VS Code. <br>
+Step 7: Click on View -- Open View -- Terminal <br>
+Step 8: Type Set-ExecutionPolicy -Scope CurrentUser Unrestricted   on the terminal, so the current user can run expo project. <br>
+Step 9: Type npx expo install react-dom react-native-web to enable web preview of the app. <br>
+Step 10: Tyep npx expo start  to start the project <br>
 
 
 ## Step 1 - register on Firebase
@@ -118,8 +118,19 @@ Copy the printed firebaseConfig object and paste it into firestoreConfig.js wher
  ```
  npx firebase-tools apps:sdkconfig web <app-id>
  ```
+## Step 7 — Create and Setup your Cloud Firestore Database
 
-## Step 7
+Before running your app, you must provision your Cloud Firestore database instance in the Firebase console:
+
+1. Go to your web browser and navigate to the Firebase Console.  <br>
+2.  Select your project. <br>
+3. Click on Firestore under Project shortcuts in your left-hand menu.  
+4. If it's your first time opening it for this project, a page will appear inviting you to Create database.  Click that button. <br>
+5. Choose a location: Pick a region close to you (e.g., us-central or europe-west) and click Next. <br>
+6. Security Rules Mode: Choose Start in test mode (this makes it easy for your lab code to write data without permission errors right away). Note: Test mode allows open reads/writes for 30 days. <br>
+7. Click Enable and wait a few seconds for Firebase to provision your database.   
+
+## Step 8
 Run your react native project from the command line by typing
 ```
 npx expo start
@@ -128,7 +139,17 @@ Choose ***w*** from the list of menu alternatives to run your project in local w
 
 add a username and email and click on the button to save your data to firebase
 
-Go to http://console.firebase.google.com
+## Step 8 — Verify the Output (Firebase Console)
+This is the standard way to verify cloud data storage:
 
-Under projects and workspaces, click on your project id. Under project shortcuts select Firestore Database. Look in the users collection and see if any data has been added. If everything worked correctly your app is saving data to your firestore database in the cloud.
+Open your web browser and go to the Firebase Console (http://console.firebase.google.com).
 
+Select your project.
+
+On the left-hand navigation menu, click on Firestore Database (or the Firestore shortcut).
+
+Look at the data viewer pane. You should see a collection named users.
+
+Click on users, and you will see random document IDs containing the name and email you just submitted from your app!
+
+If everything worked correctly your app is saving data to your firestore database in the cloud.
